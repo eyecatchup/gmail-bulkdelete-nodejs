@@ -21,4 +21,4 @@ Here's a complete list of available Gmail search operators: https://support.goog
 
 ## Warranty
 
-I wrote this for provite use soley, to clean up my 10 year old Gmail inbox faster. No warranty, no support. Feel free to use.
+I wrote this for private use soley, to clean up my 10 year old Gmail inbox faster. No warranty, no support. Feel free to use.

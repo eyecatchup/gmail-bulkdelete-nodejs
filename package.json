@@ -1,6 +1,6 @@
 {
   "name": "gmail-bulkdelete-nodejs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple Node.js command-line application that bulk trashes/deletes emails by search query using the Gmail API.",
   "dependencies": {
     "googleapis": "^39.0.0",
