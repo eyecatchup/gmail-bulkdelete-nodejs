@@ -8,8 +8,7 @@ This tiny Nodejs script lets you bulk delete messages by search query with ease,
 
 - Clone this repo and run `yarn` (or `npm install`).
 - Go to https://developers.google.com/gmail/api/quickstart/nodejs#step_1_turn_on_the, click the "Enable Gmail API"-button and download the `credentials.json` file into the repo's root directory.
-- Open the `index.js` file and adjust the `const searchPhrase = 'from:notifications@facebookmail.com'` line to your needs.
-- Open a terminal, navigate to the repo and type `node .`
+- Open a terminal, navigate to the repo and type `node . --query="has:attachment larger:5M"`
 
 ## Example queries:
 

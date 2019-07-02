@@ -2,7 +2,21 @@ const fs = require('fs');
 const readline = require('readline');
 const { google } = require('googleapis');
 
-const searchPhrase = 'from:notifications@facebookmail.com';
+let searchPhrase = false;
+
+const args = process.argv.slice(2);
+if (!args.length) {
+    console.log('Args missing');
+    return;
+} else {
+    const q = args[0].split('=');
+    if (!q.length) {
+        console.log('Invalid args');
+        return;
+    } else {
+        searchPhrase = q[1];
+    }
+}
 
 let searchQuery = {
     userId: 'me',
@@ -19,12 +33,14 @@ const SCOPES = [
 // time.
 const TOKEN_PATH = 'token.json';
 
-// Load client secrets from a local file.
-fs.readFile('credentials.json', (err, content) => {
-    if (err) return console.log('Error loading client secret file:', err);
-    // Authorize a client with credentials, then call the Gmail API.
-    authorize(JSON.parse(content), deleteEmailsByQuery);
-});
+if (searchPhrase) {
+    // Load client secrets from a local file.
+    fs.readFile('credentials.json', (err, content) => {
+        if (err) return console.log('Error loading client secret file:', err);
+        // Authorize a client with credentials, then call the Gmail API.
+        authorize(JSON.parse(content), deleteEmailsByQuery);
+    });
+}
 
 /**
  * Create an OAuth2 client with the given credentials, and then execute the
