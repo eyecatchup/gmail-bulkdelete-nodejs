@@ -13,7 +13,10 @@ This tiny Nodejs script lets you bulk delete messages by search query with ease,
 ## Example queries:
 
 - `has:attachment larger:5M` - Delete all emails with attachments larger than 5 Mb
-- `from:notifications@facebookmail.com` - Delete all FB notifications
+- `older_than:1y is:unread` - Delete all unread emails which are older than 1 year
+- `before:2015/01/01` - Delete all emails received before 1st Jan 2015
+- `label:promotions is:unread -google` - Delete all unread emails labeled with "Promotions", if they don't contain the keyword "google"
+- `from:notifications@facebookmail.com` - Delete all Facebook notifications
 - `in:trash` - Delete all emails in trash
 
 Here's a complete list of available Gmail search operators: https://support.google.com/mail/answer/7190?hl=en
